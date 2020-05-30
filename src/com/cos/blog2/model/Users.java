@@ -1,6 +1,8 @@
 package com.cos.blog2.model;
 
-import com.sun.jmx.snmp.Timestamp;
+
+
+import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,5 +20,8 @@ public class Users {
 	   private String address; 
 	   private String userProfile; 
 	   private String userRole; 
-	   private Timestamp createDate; 
+	   private Timestamp createDate;
+	
+		
+	 
 }

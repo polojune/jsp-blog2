@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.cos.blog2.action.Action;
 import com.cos.blog2.action.user.UsersJoinAction;
 import com.cos.blog2.action.user.UsersJoinProcAction;
+import com.cos.blog2.action.user.UsersLoginProcAction;
+import com.cos.blog2.action.user.UsersLoginAction;
 
 /**
  * Servlet implementation class UsersController
@@ -54,8 +56,11 @@ public class UsersController extends HttpServlet {
 	    	  //회원삭제를 진행 후 -> 로그 아웃(세션종료)을 하고 -> index.jsp로 이동 
 	      }else if(cmd.equals("login")) {
 	    	  //회원 로그인 페이지로 이동
+	    	  return new UsersLoginAction();
 	      }else if(cmd.equals("loginProc")) { 
 	    	  //회원 로그인을 수행한 후 -> index.jsp로 이동
+	    	
+	    	  return new UsersLoginProcAction();
 	      }
 	      return null;
   }
